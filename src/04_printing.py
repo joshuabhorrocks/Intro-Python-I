@@ -8,10 +8,13 @@ x = 10
 y = 2.24552
 z = "I like turtles!"
 
-# Using the printf operator (%), print the following feeding in the values of x,
+# Using the printf operator (%), print the following, feeding in the values of x,
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
+print("Using operator: x is %a, y is %.2f, z is '%s'" % (x,  y,  z))
 
 # Use the 'format' string method to print the same thing
+print(format("Using format: x is %a, y is %.2f, z is '%s'" % (x, y, z)))
 
 # Finally, print the same thing using an f-string
+print(f"Using f-string: x is {x}, y is {y:.2f}, z is '{z}'")

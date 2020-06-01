@@ -5,7 +5,9 @@
 # the sum. This is what you'd consider to be a regular, normal function.
 
 # YOUR CODE HERE
-
+def f1(arg1, arg2):
+    arg1 + arg2
+    
 print(f1(1, 2))
 
 # Write a function f2 that takes any number of integer arguments and returns the
@@ -13,7 +15,9 @@ print(f1(1, 2))
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
 # YOUR CODE HERE
-
+def f2(*argv):
+    for arg in argv:
+        print (arg)
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
 print(f2(1, 4, -12))            # Should print -7
