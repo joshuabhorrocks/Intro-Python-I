@@ -30,3 +30,37 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+cal = calendar.Calendar()
+
+print("Script name: %s" % (sys.argv))
+
+if sys.argv[1:] == []:
+  month = None
+else:
+  month = sys.argv[1]
+
+if sys.argv[2:] == []:
+  year = None
+else:
+  year = sys.argv[2]
+
+print(year)
+print(month)
+
+if year is not None:
+  if month is not None:
+    for day in cal.itermonthdates(int(year), int(month)):
+      print(day)
+
+elif year is None:
+  if month is not None:
+    for day in cal.itermonthdates(2020, int(month)):
+      print(day)
+  
+  elif month is None:
+    for day in cal.itermonthdates(2020, 6):
+      print(day)
+
+else:
+  print("Please type 'python 14_cal.py <month> <year>'")
