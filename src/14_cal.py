@@ -37,16 +37,19 @@ print("Script name: %s" % (sys.argv))
 
 if sys.argv[1:] == []:
   month = None
+#elif type(sys.argv[1]) == str:#
+  #sys.exit("Please input the right format: 'python 14_cal.py <month> <year>'")
 else:
   month = sys.argv[1]
 
 if sys.argv[2:] == []:
   year = None
+#elif type(sys.argv[2]) == str:
+  #sys.exit("Please input the right format: 'python 14_cal.py <month> <year>'")
 else:
   year = sys.argv[2]
 
-print(year)
-print(month)
+# Logic Checking
 
 if year is not None:
   if month is not None:
